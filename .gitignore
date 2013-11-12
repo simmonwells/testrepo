@@ -3,3 +3,5 @@ lock
 data
 cache
 public/wiki
+/nbproject/private/
+nbproject/
