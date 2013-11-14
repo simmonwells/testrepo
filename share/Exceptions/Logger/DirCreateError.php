@@ -1,5 +1,4 @@
 <?php
-<?php
 namespace Exceptions\Logger;
 /**
  * Created by JetBrains PhpStorm.
