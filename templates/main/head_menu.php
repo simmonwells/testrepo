@@ -3,11 +3,12 @@
     <div id="logo">JTS</div>
     <div id="mainmenu">
         <ul id="yw0">
-            <li><a href="/constructor">Конструктор</a></li>
-            <li><a href="/settings">Настройки</a></li>
-            <li><a href="/users">Пользователи</a></li>
-            <li><a href="/">Журнал действий</a></li>
-            <li><a href="/">Помощь</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/customers">Customers</a></li>
+            <li><a href="/carriers">Carriers</a></li>
+            <li><a href="/about">About US</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/help">Help</a></li>
         </ul>
     </div>
 </div><!-- header -->

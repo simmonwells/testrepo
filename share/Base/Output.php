@@ -30,9 +30,16 @@ class Output
         $this->mime_type = $type;
     }
     
-    public function include_tpl($path)
+    public function include_tpl($path,$use_base_path=true)
     {
-         include $this->include_tpl_dir.$this->route.'/'."{$path}.php";
+        if ($use_base_path)
+        {
+            include $this->include_tpl_dir . $this->route . '/' . "{$path}.php";
+        }
+        else
+        {
+            include $this->include_tpl_dir . "base" . '/' . "{$path}.php";
+        }
     }
     
     public static function getInstance($type)
@@ -47,6 +54,7 @@ class Output
         $this->route = $route;
         return $this;
     }
+    
     public function getRouter()
     {
         return $this->route;

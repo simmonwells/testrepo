@@ -26,6 +26,7 @@
                     <?php $this->include_tpl("head_menu");?>
             </div><!-- mainmenu -->
             
+            
             <div class="clear"></div>
 
             <div id="footer">
