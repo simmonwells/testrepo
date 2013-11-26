@@ -7,7 +7,7 @@ class Output
 {
 	
     protected $mime_type;
-    
+    protected $route;
     public function sendHeaders($response)
     {
         header('HTTP/1.1 '.intval($response->getStatusCode()).' '.$response->getMessage());
@@ -35,5 +35,11 @@ class Output
     	$class = 'Output\\' . strtoupper($type);
     	$obj = new $class;
     	return $obj; 
+    }
+    
+    public function setRouter($route)
+    {
+        $this->route = $route;
+        return $this;
     }
 }

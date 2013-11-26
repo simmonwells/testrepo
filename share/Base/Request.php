@@ -10,9 +10,8 @@ class Request
     protected $output_format = "html";
     protected $server_info;
     protected $method;
-    protected $company;
     protected $file_path;
-	
+    protected $router="main";
     public function __construct()
     {
 	$this->server_info = $_SERVER;
@@ -47,7 +46,17 @@ class Request
         	$this->setOutputFormat($this->output_format);
     	}
     }
-	
+    
+    public function getRouter()
+    {
+        return $this->router;
+    }
+    
+    public function setRouter($router)
+    {
+        $this->router = $router;
+    }
+    
     public function getOutputFormat()
     {
     	return $this->output_format;

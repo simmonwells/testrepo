@@ -6,7 +6,8 @@
     
     try {
         echo $app->processOutput();
-        //throw new Base\Exception("dsadasda","dasdasd",404);
+        
+        throw new Base\Exception("dsadasda","dasdasd",404);
     } catch (Base\Exception $e){
         
         echo $app->processError($e);

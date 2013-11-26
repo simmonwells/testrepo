@@ -17,7 +17,6 @@ class ERROR extends Output
 
     public function executeOutput()
     {
-        $returnedData = json_encode($this->response);
-        return $returnedData;
+        return file_get_contents("../templates/404.html");
     }
 }

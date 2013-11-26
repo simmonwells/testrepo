@@ -18,7 +18,6 @@ class HTML extends Output
 
     public function executeOutput()
     {
-        $returnedData = json_encode($this->response);
-        return $returnedData;
+        
     }
 }

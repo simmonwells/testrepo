@@ -9,6 +9,8 @@
 	protected $config;
 	
 	protected $output ="";
+        
+        protected $data;
 	
 	public function __construct()
 	{
@@ -20,12 +22,30 @@
 		return $this->config;
 	}
 	
+        public function getOutputFormat()
+        {
+            return $this->getRequest()->getOutputFormat();
+        }
+        
+        public function getRouter()
+        {
+            return $this->getRequest()->getRouter();
+        }
+        
 	public function processOutput()
 	{
 		$this->getRequest()->checkRequest();
-		
+                $this->run();
+		return Output::getInstance($this->getOutputFormat())
+                        ->setRouter($this->getRouter())
+                        ->populateOutput($data)
+                        ->executeOutput();
 	}
 	
+        protected function run()
+        {
+            $this->data = array();
+        }
 	public function getRequest()
 	{
 		return $this->request;	
