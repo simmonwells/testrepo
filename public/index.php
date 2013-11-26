@@ -1,4 +1,14 @@
 <?php
     require_once 'Autoloader.php';
     Loader\Autoloader::register();
-    Base\Application::createWebApplication();
+    $app =  Base\Application::createWebApplication();
+    try {
+
+        echo $app->processOutput();
+        throw new Base\Exception("dsadasda","dasdasd",403);
+    } catch (Base\Exception $e){
+        
+        echo $app->processError($e);
+        exit;
+    
+    }
