@@ -113,6 +113,7 @@ class Constants
     );
     
     static $allow_output_format = array (
+                'error',
 		'json',
 		'xml',
                 'html'

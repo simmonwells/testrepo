@@ -23,7 +23,7 @@
 	public function processOutput()
 	{
 		$this->getRequest()->checkRequest();
-		//var_dump($this);
+		
 	}
 	
 	public function getRequest()
@@ -33,7 +33,7 @@
 	
 	public function processError(Exception $e)
 	{
-		$this->output = Output::getInstance($this->request->getOutputFormat())->populateOutput($e->toArray())
+		$this->output = Output::getInstance("error")->populateOutput($e->toArray())
                ->sendHeaders($e)
                ->executeOutput();
 		return $this->output;
