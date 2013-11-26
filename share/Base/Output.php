@@ -5,7 +5,7 @@ namespace Base;
  */
 class Output
 {
-	
+    protected $include_tpl_dir = "../templates/";
     protected $mime_type;
     protected $route;
     public function sendHeaders($response)
@@ -29,7 +29,12 @@ class Output
     {
         $this->mime_type = $type;
     }
-	
+    
+    public function include_tpl($path)
+    {
+         include $this->include_tpl_dir.$this->route.'/'."{$path}.php";
+    }
+    
     public static function getInstance($type)
     {
     	$class = 'Output\\' . strtoupper($type);
@@ -42,4 +47,9 @@ class Output
         $this->route = $route;
         return $this;
     }
+    public function getRouter()
+    {
+        return $this->route;
+    }
+    
 }

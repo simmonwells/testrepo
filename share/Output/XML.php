@@ -24,7 +24,7 @@ class XML extends Output
     public function executeOutput()
     {
          
-        return $this->getDocument(); 
+        echo $this->getDocument(); 
     
     }
 

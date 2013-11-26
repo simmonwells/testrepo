@@ -18,6 +18,7 @@ class HTML extends Output
 
     public function executeOutput()
     {
-        
+        $router = $this->getRouter();
+        $this->include_tpl($this->route);
     }
 }

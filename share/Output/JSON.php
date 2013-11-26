@@ -18,7 +18,7 @@ class JSON extends Output
 
     public function executeOutput()
     {
-        $returnedData = json_encode($this->response);
-        return $returnedData;
+        echo json_encode($this->response);
+        
     }
 }
