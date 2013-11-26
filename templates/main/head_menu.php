@@ -1,6 +1,6 @@
 
 <div id="header">
-    <div id="logo">JTS</div>
+    <div id="logo" onclick="location.href='/';"  style="cursor: pointer;">JTS</div>
     <div id="mainmenu">
         <ul id="yw0">
             <li><a href="/home">Home</a></li>
